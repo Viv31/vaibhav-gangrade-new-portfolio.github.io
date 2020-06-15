@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VAIBHAV PORTFOLIO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4=" crossorigin="anonymous" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+
+  <style type="text/css">
+body{
+    background-color: #3e7b97;
+}
+html{
+    scroll-behavior: smooth;
+}
+html,body{
+    overflow-x: hidden;
+}
+
+#experience{
+    margin-top: 5px;
+}
+
+.main-timeline{
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+.main-timeline:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.main-timeline .timeline{
+    width: 50%;
+    padding: 0 0 0 30px;
+    margin: 0 30px 20px 0;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+.main-timeline .timeline-content{
+    color: #333;
+    background-color: #f5f5f5;
+    min-height: 150px;
+    padding: 30px 80px 30px 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    display: block;
+}
+.main-timeline .timeline-content:before,
+.main-timeline .timeline-content:after{
+    content: '';
+    background: linear-gradient(to bottom,#2E687C 49%,#3E7B97 50%);
+    height: 100%;
+    width: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.main-timeline .timeline-content:after{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    top: 50%;
+    left: auto;
+    right: -75px;
+}
+.main-timeline .timeline-content:hover{ text-decoration: none; }
+.main-timeline .timeline-icon{
+    color: #fff;
+    background: linear-gradient(to bottom,#2E687C 49%,#3E7B97 50%);
+    font-size: 45px;
+    text-align: center;
+    line-height: 108px;
+    height: 105px;
+    width: 105px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px #fff;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: -52px;
+}
+.main-timeline .title{
+    color: #2E687C;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 7px 0;
+}
+.main-timeline .description{
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin: 0;
+}
+.main-timeline .timeline:nth-child(even){
+    float: right;
+    padding: 0 30px 0 0;
+    margin: 0 0 20px 30px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content{ padding: 30px 30px 30px 80px; }
+.main-timeline .timeline:nth-child(even) .timeline-content:before{
+    left: auto;
+    right: 0;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content:after{
+    right: auto;
+    left: -75px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-icon{
+    right: auto;
+    left: -52px;
+}
+.main-timeline .timeline:nth-child(4n+2) .timeline-content:before,
+.main-timeline .timeline:nth-child(4n+2) .timeline-content:after,
+.main-timeline .timeline:nth-child(4n+2) .timeline-icon{
+    background: linear-gradient(to bottom,#ff6348 49%,#ff7f50 50%);
+}
+.main-timeline .timeline:nth-child(4n+2) .title{ color: #ff6348; }
+.main-timeline .timeline:nth-child(4n+3) .timeline-content:before,
+.main-timeline .timeline:nth-child(4n+3) .timeline-content:after,
+.main-timeline .timeline:nth-child(4n+3) .timeline-icon{
+    background: linear-gradient(to bottom,#259390 49%,#46AEAF 50%);
+}
+.main-timeline .timeline:nth-child(4n+3) .title{ color: #259390; }
+.main-timeline .timeline:nth-child(4n+4) .timeline-content:before,
+.main-timeline .timeline:nth-child(4n+4) .timeline-content:after,
+.main-timeline .timeline:nth-child(4n+4) .timeline-icon{
+    background: linear-gradient(to bottom,#CC3254 49%,#E33A59 50%);
+}
+.main-timeline .timeline:nth-child(4n+4) .title{ color: #CC3254; }
+
+/*CSS FOR FLIP CARDS*/
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.progress{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*CSS FOR FLIP CARDS*/
+
+/*ACHIEVEMENTS*/
+
+/* Achievement  */
+#achievements{
+  margin-top: 5px;
+  background-color: #86a586;
+}
+
+.achievements_container{
+  line-height: 30px;
+}
+/* Hiding li default style*/
+li{
+  list-style: none;
+}
+
+/* making trophy color and size */
+.fa-trophy::before {
+    font-size: 20px;
+    color: gold;
+    padding: 3px;
+}
+
+.achievements_container ul li:hover{
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/*ACHIEVEMENTS*/
+
+
+
+#Skills{
+   /* background-color: rgba(0,0,0,0.7);*/
+    height: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+
+}
+
+
+/*  CSS FOR PROJECTS CARD PADDING AND MARGIN  */
+
+.col-sm-4{
+    padding-bottom: 1px;
+    padding-top: 1px;
+
+}
+.col-sm-4:hover{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.7); 
+    z-index: 1000;
+}
+
+.card{
+    background-color: lightgrey;
+
+}
+
+.hobby_div{
+    background-color: #FFFAFA;
+    text-align: center;
+    padding-bottom: 2px;
+
+
+}
+
+.hobby_div:hover{
+    border-bottom-color: #fff;
+    border-bottom-width: 2px;
+    background-color: #ff7f50;
+    color: #fff;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.7); 
+}
+
+.hobby_section{
+   
+ padding:5px;
+}
+
+/*  CSS FOR PROJECTS CARD PADDING AND MARGIN  */
+
+/*  CSS FOR TYPING EFFECTS */
+
+.tying_div{
+    background-color: rgba(0,0,0,0.7);
+}
+
+.typed_wrap {
+  display: block;
+  padding: 20px;
+   /*centers it in the .banner*/
+  position: absolute;
+  top: 38%;
+  left: 20%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.typed_wrap h6 {
+  display: inline;
+  color:white;
+}
+
+/*Add custom cursor so it auto inherits font styles*/
+.typed::after {
+  content: '|';
+  display: inline;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor{
+   opacity: 0;
+  display: none;
+}
+/*Custom cursor animation*/
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+@media only screen and (max-width: 400px) 
+{
+  .text-center 
+  {
+      font-size: 12px!important;
+  }
+  .typed_wrap{
+
+        height: 100px;
+        float: right!important;
+        word-break: break-all;
+        
+  }
+  .typed_wrap h2 
+  {
+    
+
+      font-size: 14px!important;
+  }
+
+  .typed{
+    /*position: fixed;*/
+    display: inline-block;
+  }
+
+
+  .flip-card{
+    width:270px!important; 
+  }
+
+/* For making project image content fit  */
+  .col-sm-4 img{
+    width: 95%;
+    /*position: absolute;*/
+
+  }
+
+}
+/* END OF CSS FOR TYPING EFFECTS */
+
+
+
+
+
+/******************** MEDIA QUERY    */
+
+@media screen and (max-width:767px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        width: 100%;
+        padding: 0 75px 0 30px;
+        margin: 0 0 20px;
+    }
+    .main-timeline .timeline:nth-child(even){ padding: 0 30px 0 75px; }
+    .main-timeline .timeline .timeline-content:after{ right: 0; }
+    .main-timeline .timeline:nth-child(even) .timeline-content:after{ left: 0; }
+    .main-timeline .timeline .timeline-icon{ right: 20px; }
+    .main-timeline .timeline:nth-child(even) .timeline-icon{ left: 20px; }
+}
+@media screen and (max-width:567px){
+    .main-timeline .timeline{ padding: 0 35px 0 10px; }
+    .main-timeline .timeline:nth-child(even){ padding: 0 10px 0 30px; }
+    .main-timeline .timeline .timeline-content{ padding: 30px 50px 30px 20px; }
+    .main-timeline .timeline:nth-child(even) .timeline-content{ padding: 30px 20px 30px 50px; }
+    .main-timeline .timeline .timeline-content:after{
+        height: 80px;
+        width: 80px;
+        right: 0;
+    }
+    .main-timeline .timeline:nth-child(even) .timeline-content:after{ left: 0; }
+    .main-timeline .timeline .timeline-icon{
+        font-size: 30px;
+        line-height: 50px;
+        height: 50px;
+        width: 50px;
+        box-shadow: 0 0 0 5px #fff;
+        right: 20px;
+        right: 15px;
+    }
+    .main-timeline .timeline:nth-child(even) .timeline-icon{ left: 15px; }
+    .main-timeline .title{ font-size: 18px; }
+}
+
+
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+ <nav class="navbar navbar-expand-md bg-info navbar-dark fixed-top" style="margin-bottom:20px;">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">
+    <img src="viv.jpg" alt="Logo" style="width:40px;">
+  </a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#home">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#experience">EXPERIENCE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#education">EDUCATION</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#Skills">SKILLS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#projects">PROJECTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#hobbies">HOBBIES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact Me</a>
+      </li>
+    </ul>
+  </div>
+</nav><br><br><br><br>
+
+<div class="row" id="home">
+    <div class="col-md-6">
+        <img src="interview.png" class="img-fluid" style="align-self:">
+    </div>
+    <div class="col-md-6 tying_div">
+        <div class="typed_wrap">
+      <h6>Hi I am,<span class="typed"></span></h6>
+    </div>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    </div>
+</div> -->
+
+    
+    <div class="container">
+        <!--Starts of work experience section-->
+    <div class="row" id="experience">
+        <div class="col-md-12">
+            <h2 class="bg-dark text-center text-white" style="padding: 10px;">Work Experience</h2>
+        </div>
+        <div class="col-md-12">
+
+            <div class="main-timeline">
+                <div class="timeline" data-aos="fade-left" data-aos-duration="3000">
+                    <a href="#" class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fa fa-globe"></i>
+                        </div>
+                        <h3 class="title">Web Designing</h3>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo
+                        </p>
+                    </a>
+                </div>
+                <div class="timeline" data-aos="fade-right" data-aos-duration="3000">
+                    <a href="#" class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fa fa-rocket"></i>
+                        </div>
+                        <h3 class="title">Web Development</h3>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo
+                        </p>
+                    </a>
+                </div>
+                 <div class="timeline" data-aos="fade-up" data-aos-duration="3000">
+                    <a href="#" class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fa fa-globe"></i>
+                        </div>
+                        <h3 class="title">Web Designing</h3>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo
+                        </p>
+                    </a>
+                </div>
+                <div class="timeline" data-aos="fade-down" data-aos-duration="3000">
+                    <a href="#" class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fa fa-rocket"></i>
+                        </div>
+                        <h3 class="title">Web Development</h3>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo
+                        </p>
+                    </a>
+                </div>
+                 
+               
+            </div>
+        </div>
+    </div>
+    <!--ENDS of work experience section-->
+<!--Education Section starts here-->
+    <div class="row" id="education">
+        <div class="col-md-12">
+            <h2 class="bg-dark text-white text-center">EDUCATION & QUALIFICATION</h2>
+        </div>
+        <div class="col-md-4" data-aos="fade-right" data-aos-duration="3000">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                  <h3>BE IT</h3>
+                </div>
+                <div class="flip-card-back">
+                  <h1>John Doe</h1> 
+                  <p>Architect & Engineer</p> 
+                  <p>We love that guy</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-duration="3000">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                   <h3>HIGHER SECONDARY</h3>
+                </div>
+                <div class="flip-card-back">
+                  <h1>John Doe</h1> 
+                  <p>Architect & Engineer</p> 
+                  <p>We love that guy</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" data-aos="fade-left" data-aos-duration="3000">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                   <h3>HIGH SCHOOL</h3>
+                </div>
+                <div class="flip-card-back">
+                  <h1>John Doe</h1> 
+                  <p>Architect & Engineer</p> 
+                  <p>We love that guy</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <!--Education Section ends here-->
+
+    <!--Start of Skills Section-->
+    <div class="row" id="Skills">
+        <div class="col-md-12">
+            <h3 class="text-center bg-dark">SKILLS</h3>
+        </div>
+        <div class="col-md-6" data-aos="fade-left" data-aos-duration="2000">
+             <div class="progress">
+                <div class="progress-bar progress-bar-striped"  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:95%"><span class="sr-only"></span>HTML (95%)
+                </div>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped"  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:95%"><span class="sr-only"></span>HTML (95%)
+                </div>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped"  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:95%"><span class="sr-only"></span>HTML (95%)
+                </div>
+            </div>
+           
+        </div>
+        <div class="col-md-6" data-aos="fade-right" data-aos-duration="3000">
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped"  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:95%"><span class="sr-only"></span>HTML (95%)
+                </div>
+            </div>
+<div class="progress">
+                <div class="progress-bar progress-bar-striped"  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:95%"><span class="sr-only"></span>HTML (95%)
+                </div>
+            </div>
+        <div class="progress">
+                <div class="progress-bar progress-bar-striped"  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:95%"><span class="sr-only"></span>HTML (95%)
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <!--End of Skills Section-->
+
+
+    <!--PROJECTS-->
+    <div class="row" id="projects">
+        <div class="mb-2 col-md-12">
+        <button class="btn btn-primary btn-xs all_btn"  id="all">All</button>
+      <button class="btn btn-primary  btn-xs php_btn" id="php_project">PHP/WORDPRESS</button>
+      <button class="btn btn-primary  btn-xs dotnet_btn" id="MvcProject">MVC .NET</button>
+      <button class="btn btn-primary  btn-xs dotnet_btn" id="OtherProject">GITHUB</button>
+             </div>
+    </div>
+    <div class="row" style="background-color:#FFFAFA;">
+        
+  <div class="col-sm-4 php">
+    <div class="card">
+      <div class="card-body">
+        <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Breyerwoods</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 php">
+    <div class="card">
+      <div class="card-body">
+         <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Bizchathub</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 php">
+    <div class="card">
+      <div class="card-body">
+         <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Centlining</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 php">
+    <div class="card">
+      <div class="card-body">
+        <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Joliespa</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 php">
+    <div class="card">
+      <div class="card-body">
+         <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Netbusiness Group</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 php">
+    <div class="card">
+      <div class="card-body">
+         <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Piperestorationhub</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 php">
+    <div class="card">
+      <div class="card-body">
+        <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Design To Appeal</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 php">
+    <div class="card">
+      <div class="card-body">
+        <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Eway It Solutions</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 php">
+    <div class="card">
+      <div class="card-body">
+        <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Aj+ Fetch Social Media</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 dotnet">
+    <div class="card">
+      <div class="card-body">
+        <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Grievance Portal</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 dotnet">
+    <div class="card">
+      <div class="card-body">
+         <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Kamna Foundation</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 dotnet">
+    <div class="card">
+      <div class="card-body">
+         <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Witness Help Desk</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 dotnet">
+    <div class="card">
+      <div class="card-body">
+       <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Xitonaturals</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 dotnet">
+    <div class="card">
+      <div class="card-body">
+        <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Magnificent</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 dotnet">
+    <div class="card">
+      <div class="card-body">
+         <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Mirror Saloon</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 dotnet">
+    <div class="card">
+      <div class="card-body">
+        <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Mountirth</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 other_project">
+    <div class="card">
+      <div class="card-body">
+         <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Quiz Website</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 other_project">
+    <div class="card">
+      <div class="card-body">
+        <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Github Projects</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 other_project">
+    <div class="card">
+      <div class="card-body">
+         <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Interview Practice Website</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 other_project">
+    <div class="card">
+      <div class="card-body">
+        <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">Dynamic Image Slider Plugin</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 other_project">
+    <div class="card">
+      <div class="card-body">
+         <img src="interview.png" height="250" width="300">
+        <h5 class="card-title">JQuery Validations</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!--END OF  PROJECTS-->
+
+    
+
+
+<!--Achievement Section starts here-->
+<div class="row">
+    <div class="col-md-12">
+        <img src="trophy.png" height="60" width="60" class="float-left"><h1 class="text-center"> Achievements & Other Activity</h1><img src="trophy.png" height="60" width="60" class="float-right">
+    </div>
+</div>
+    <div class="row" id="achievements">
+  
+  <div class="achievements_container">
+    <ul>
+      <li data-aos="fade-left" data-aos-duration="3000"><i class="fa fa-trophy"></i>Won <b>First Prize</b> in <b>CHESS</b> competetion in College Tech Fest <b>"Emblaze 2K16"</b></li>
+      <li data-aos="fade-left" data-aos-duration="3000"><i class="fa fa-trophy"></i>Actively Participate in <b>Chess</b> during <b>College Sports</b>.</li>
+      <li data-aos="fade-left" data-aos-duration="3000"><i class="fa fa-trophy"></i><b>Two times</b> runner up in <b>chess</b> during <b>college nodels</b> </li>
+      <li data-aos="fade-left" data-aos-duration="3000"><i class="fa fa-trophy"></i><b>Secured second position</b> in <b>"general knowledge examination"</b> held in <b>SLS college</b> Shujalpur in the year 2013</li>
+      <li data-aos="fade-left" data-aos-duration="3000"><i class="fa fa-trophy"></i>Actively participate in <b>Open Chess Tournament</b></li>
+       <li data-aos="fade-left" data-aos-duration="3000"><i class="fa fa-trophy"></i>Apporved Wordpress plugin "<b>Dynamic Image Slider</b>" by <a href="https://wordpress.org" style="color:white;font-weight: bold;">Wordpress</a></li>
+    </ul>
+  </div>
+</div>
+<!--Achievement Section ends here-->
+<div class="row" id="hobbies">
+    <div class="col-md-12">
+        <h1 class="text-center">HOBBY SECTION</h1>    
+     </div>
+</div>
+
+<!--HOBBY SECTION-->
+<div class="row hobby_section" style="background-color: #ff6348;">
+    <div class="col-sm-3 " data-aos="fade-right" data-aos-duration="3000">
+    <div class="card hobby_div">
+      <div class="card-body">
+         <img src="chess.gif" height="200" width="200">
+        <h5 class="card-title">CHESS</h5>
+       </div>
+    </div>
+  </div>
+    <div class="col-sm-3 " data-aos="fade-right" data-aos-duration="3000">
+    <div class="card hobby_div">
+      <div class="card-body">
+         <img src="badminton.gif" height="200" width="100%">
+        <h5 class="card-title">BADMINTON</h5>
+        
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-3 " data-aos="fade-right" data-aos-duration="3000">
+    <div class="card hobby_div">
+      <div class="card-body">
+         <img src="cricket.gif">
+        <h5 class="card-title">CRICKET</h5>
+        
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-3" data-aos="fade-right" data-aos-duration="3000">
+    <div class="card hobby_div">
+      <div class="card-body">
+         <img src="carrom.gif" height="200" width="200">
+        <h5 class="card-title">CARROM</h5>
+        
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-3" data-aos="fade-right" data-aos-duration="3000">
+    <div class="card hobby_div">
+      <div class="card-body">
+         <img src="drawing.gif" height="200" width="200">
+        <h5 class="card-title">DRAWING & PAINTING</h5>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!--HOBBY SECTION ENDS  -->
+<!--COUNTER SECTION-->
+<div class="row">
+    <div class="col-md-4">
+        GITHUB PROJECTS
+        <h1 class="counter" data-count="38">0</h1>
+    </div>
+    <div class="col-md-4">
+        Wordpress Apporved Plugin
+        <h1 class="counter" data-count="01">0</h1>
+    </div>
+    <div class="col-md-4">
+        LINKEDIN CONNECTIONS
+        <h1 class="counter" data-count="7500">0</h1>
+    </div>
+
+
+
+</div>
+<!-- END OF COUNTER SECTION-->
+</div><!--END OF CONTAINER-->
+<div class="footer" style="height: 200px;background-color: rgba(0,0,0,0.7);" id="contact"></div>
+</div><!--CONTAINER FLUID ENDS HERE-->
+
+
+
+<script>
+  AOS.init();
+</script>
+<script type="text/javascript">
+
+ $(window).scroll(function() {
+    if($(window).scrollTop() == $(document).height() - $(window).height()) {
+           
+
+            $('.counter').each(function() {
+  var $this = $(this),
+      countTo = $this.attr('data-count');
+  
+  $({ countNum: $this.text()}).animate({
+    countNum: countTo
+  },
+
+  {
+
+    duration: 8000,
+    easing:'linear',
+    step: function() {
+      $this.text(Math.floor(this.countNum));
+    },
+    complete: function() {
+      $this.text(this.countNum);
+      //alert('finished');
+    }
+
+  });  
+  
+  
+
+});
+
+    }
+});
+
+   
+</script>
+
+<script type="text/javascript">
+ $(document).ready(function(){
+
+$('#php_project').click(function(){
+
+
+$('#php_project').css('background-color','green');
+$('#MvcProject').css('background-color','');
+$('#all').css('background-color','');
+ $("#OtherProject").css('background-color','');
+$('.php').show();
+$('.dotnet').hide();
+$(".other_project").hide();
+
+
+});
+
+
+
+$('#MvcProject').click(function(){
+
+$('#MvcProject').css('background-color','green');
+$('#php_project').css('background-color','');
+$('#all').css('background-color','');
+ $("#OtherProject").css('background-color','');
+$('.php').hide();
+$(".other_project").hide();
+$('.dotnet').show();
+});
+
+$("#all").click(function(){
+
+$('#all').css('background-color','green');
+$('#MvcProject').css('background-color','');
+$('#php_project').css('background-color','');
+ $("#OtherProject").css('background-color','');
+$('.php').show();
+$('.dotnet').show();
+$(".other_project").show();
+
+
+});
+
+$("#OtherProject").click(function(){
+
+  $("#OtherProject").css('background-color','green');
+$('#all').css('background-color','');
+$('#MvcProject').css('background-color','');
+$('#php_project').css('background-color','');
+
+  $('.php').hide();
+$('.dotnet').hide();
+$(".other_project").show();
+
+});
+
+ });
+ 
+
+$(function(){
+  $(".typed").typed({
+    strings: ["Web Developer","Full Stack Developer","Web Designer"],
+    // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+    stringsElement: null,
+    // typing speed
+    typeSpeed: 100,
+    // time before typing starts
+    startDelay: 1600,
+    // backspacing speed
+    backSpeed: 100,
+    // time before backspacing
+    backDelay: 900,
+    // loop
+    loop: true,
+    // false = infinite
+    loopCount: 15,
+    // show cursor
+    showCursor: false,
+    // character for cursor
+    cursorChar: "|",
+    // attribute to type (null == text)
+    attr: null,
+    // either html or text
+    contentType: 'html',
+    // call when done callback function
+    callback: function() {},
+    // starting callback function before each string
+    preStringTyped: function() {},
+    //callback for every typed string
+    onStringTyped: function() {},
+    // callback for reset
+    resetCallback: function() {}
+  });
+});
+
+//For auto hide button on reaching id
+
+$(document).ready(function () {
+    $("nav").find("li").on("click", "a", function () {
+        $('.navbar-collapse.in').collapse('hide');
+    });
+});
+
+</script>
+
+
+
+</body>
+</html>
+
