@@ -4,6 +4,9 @@
   <title>VAIBHAV PORTFOLIO</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How to create portfolio for web developer" />
+  <meta name="keywords" content="portfolio,web devloper portfoio,programmmer's portfolio,github portfolio,portfolio Design,software engineer portfolio,web designer portfolio,portfolio in bootstrap,software developer portfolio" />
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4=" crossorigin="anonymous" />
@@ -15,7 +18,9 @@
 
   <style type="text/css">
 body{
-    background-color: #3e7b97;
+    /*background-color: #3e7b97;*/
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 34%, rgba(0,212,255,1) 100%);
 }
 html{
     scroll-behavior: smooth;
@@ -25,6 +30,7 @@ html,body{
 }
 
 #experience{
+  background-color: #20B2AA;
     margin-top: 5px;
 }
 
@@ -273,90 +279,56 @@ li{
 /*  CSS FOR PROJECTS CARD PADDING AND MARGIN  */
 
 /*  CSS FOR TYPING EFFECTS */
-
-.tying_div{
+.typing_column{
     background-color: rgba(0,0,0,0.7);
+
 }
 
-.typed_wrap {
-  display: block;
-  padding: 20px;
-   /*centers it in the .banner*/
-  position: absolute;
-  top: 38%;
-  left: 20%;
-  -webkit-transform: translate(-50%,-50%);
-  -moz-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  -o-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+#home{
+    background-image: url('youtube.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10px;
 }
 
-.typed_wrap h6 {
-  display: inline;
-  color:white;
+/* SOCIAL ICONS FOR FOOTER  */
+
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  margin-left: 40px;
+  color: #000;
 }
 
-/*Add custom cursor so it auto inherits font styles*/
-.typed::after {
-  content: '|';
-  display: inline;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
-  animation: blink 0.7s infinite;
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }
 
-/*Removes cursor that comes with typed.js*/
-.typed-cursor{
-   opacity: 0;
-  display: none;
-}
-/*Custom cursor animation*/
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
+
+ 
+/* SOCIAL ICONS FOR FOOTER  */
+
+
 
 
 @media only screen and (max-width: 400px) 
 {
-  .text-center 
-  {
-      font-size: 12px!important;
-  }
-  .typed_wrap{
-
-        height: 100px;
-        float: right!important;
-        word-break: break-all;
-        
-  }
-  .typed_wrap h2 
-  {
-    
-
-      font-size: 14px!important;
-  }
-
-  .typed{
-    /*position: fixed;*/
-    display: inline-block;
-  }
-
+  
 
   .flip-card{
     width:270px!important; 
+    padding: 3px!important;
   }
 
 /* For making project image content fit  */
@@ -365,6 +337,21 @@ li{
     /*position: absolute;*/
 
   }
+
+  .chip{
+    margin-top: 5px;
+    /*padding: 2px;*/
+    height: 40px;
+    color: black;
+  }
+
+  .chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 30px;
+  width: 50px;
+  border-radius: 50%;
+}
 
 }
 /* END OF CSS FOR TYPING EFFECTS */
@@ -417,7 +404,7 @@ li{
 </head>
 <body>
     <div class="container-fluid">
- <nav class="navbar navbar-expand-md bg-info navbar-dark fixed-top" style="margin-bottom:20px;">
+ <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top" style="margin-bottom:20px;">
   <!-- Brand -->
   <a class="navbar-brand" href="#">
     <img src="viv.jpg" alt="Logo" style="width:40px;">
@@ -458,27 +445,19 @@ li{
 
 <div class="row" id="home">
     <div class="col-md-6">
-        <img src="interview.png" class="img-fluid" style="align-self:">
+        <img src="viv.jpg" class="rounded-circle mx-auto d-block" height="200" width="200">
     </div>
-    <div class="col-md-6 tying_div">
-        <div class="typed_wrap">
-      <h6>Hi I am,<span class="typed"></span></h6>
-    </div>
+    <div class="col-md-6 typing_column mx-auto">
+        <h3 class="text-white" style="text-shadow:2px 2px 5px red;">
+  <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, I am Vaibhav.", "I am Creative.", "I Love Design.", "I Love to Develop.","I Love Programming" ]' style="text-shadow: 2px 2px 5px red; color: #fff;">
+    <span class="wrap"></span>
+  </a>
+</h3>
+       
+    <p class="text-white">I am <b>VAIBHAV GANGRADE</b> passonate web developer having 3+ years of experience.</p>
     </div>
 </div>
 
-<!-- <div class="row">
-    <div class="col-md-12">
-        <div class="jumbotron">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-    </div>
-</div> -->
 
     
     <div class="container">
@@ -495,11 +474,15 @@ li{
                         <div class="timeline-icon">
                             <i class="fa fa-globe"></i>
                         </div>
-                        <h3 class="title">Web Designing</h3>
+                        <h3 class="title">Web Developer</h3>
+                        <p><img src="interview.png" width="100"></p>
                         <p class="description">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo
                         </p>
+                        
                     </a>
+
                 </div>
                 <div class="timeline" data-aos="fade-right" data-aos-duration="3000">
                     <a href="#" class="timeline-content">
@@ -507,7 +490,9 @@ li{
                             <i class="fa fa-rocket"></i>
                         </div>
                         <h3 class="title">Web Development</h3>
+                       <p><img src="interview.png" width="100"></p>
                         <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo
                         </p>
                     </a>
@@ -518,7 +503,9 @@ li{
                             <i class="fa fa-globe"></i>
                         </div>
                         <h3 class="title">Web Designing</h3>
+                        <p><img src="interview.png" width="100"></p>
                         <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo
                         </p>
                     </a>
@@ -529,7 +516,9 @@ li{
                             <i class="fa fa-rocket"></i>
                         </div>
                         <h3 class="title">Web Development</h3>
+                        <p><img src="interview.png" width="100"></p>
                         <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer males uada tellus lorem, et condimentum neque commodo
                         </p>
                     </a>
@@ -965,7 +954,34 @@ li{
 </div>
 <!-- END OF COUNTER SECTION-->
 </div><!--END OF CONTAINER-->
-<div class="footer" style="height: 200px;background-color: rgba(0,0,0,0.7);" id="contact"></div>
+<div class="footer" style="height: 200px;background-color: rgba(0,0,0,0.7);color: #fff;" id="contact">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="chip">
+  <img src="github.png" alt="Github">
+  John Doe
+</div>
+    </div>
+    <div class="col-md-3">
+      <div class="chip">
+  <img src="github.png" alt="Person" width="96" height="96">
+  John Doe
+</div>
+    </div>
+    <div class="col-md-3">
+     <div class="chip">
+  <img src="github.png" alt="Person" width="96" height="96">
+  John Doe
+</div>
+    </div>
+    <div class="col-md-3">
+      <div class="chip">
+  <img src="github.png" alt="Person" width="96" height="96">
+  John Doe
+</div>
+    </div>
+  </div>
+</div>
 </div><!--CONTAINER FLUID ENDS HERE-->
 
 
@@ -1070,41 +1086,6 @@ $(".other_project").show();
  });
  
 
-$(function(){
-  $(".typed").typed({
-    strings: ["Web Developer","Full Stack Developer","Web Designer"],
-    // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
-    stringsElement: null,
-    // typing speed
-    typeSpeed: 100,
-    // time before typing starts
-    startDelay: 1600,
-    // backspacing speed
-    backSpeed: 100,
-    // time before backspacing
-    backDelay: 900,
-    // loop
-    loop: true,
-    // false = infinite
-    loopCount: 15,
-    // show cursor
-    showCursor: false,
-    // character for cursor
-    cursorChar: "|",
-    // attribute to type (null == text)
-    attr: null,
-    // either html or text
-    contentType: 'html',
-    // call when done callback function
-    callback: function() {},
-    // starting callback function before each string
-    preStringTyped: function() {},
-    //callback for every typed string
-    onStringTyped: function() {},
-    // callback for reset
-    resetCallback: function() {}
-  });
-});
 
 //For auto hide button on reaching id
 
@@ -1114,6 +1095,65 @@ $(document).ready(function () {
     });
 });
 
+</script>
+
+<script type="text/javascript">
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
 </script>
 
 
